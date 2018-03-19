@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: microservice-consumer-movie
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka
+instance:
+  prefer-ip-address: true
+user:
+  userServiceUrl:
+    protocol: http
+    host: peer1
+    port: 8080

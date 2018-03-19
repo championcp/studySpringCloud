@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: admin
+Build-Jdk: 9.0.4
+Implementation-Title: study1
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.itumch.cloud
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/microservice
+ -provider-user/
+Created-By: Maven Integration for Eclipse
+

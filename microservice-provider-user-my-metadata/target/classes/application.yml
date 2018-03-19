@@ -1,0 +1,43 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-provider-user
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - VMware.*
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://acc:Passw0rd@peer1:8761/eureka
+      defaultZone: http://peer1:8761/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      # 自定义的元数据，key和value都可以随便写。
+      my-metadata: 我的自定义元数据
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+info:
+  app:
+    name: 'microservice-provider-user-my-metadata'
+    encoding: 'UTF-8'
+    java:
+      source: '9.0.4'
+      target: '9.0.4'

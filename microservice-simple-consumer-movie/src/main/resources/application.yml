@@ -1,0 +1,7 @@
+server:
+  port: 8081
+user:
+  userServiceUrl:
+    protocol: http
+    host: localhost
+    port: 8080
